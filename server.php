@@ -1,7 +1,7 @@
 <?php 
 // var_dump($_GET);
 $message = $_GET['message'];
-$newMessage = str_replace('ciao', 'SALVE', $message);
+$newMessage = str_replace('ciao', 'SALVE', $message, $count);
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,8 @@ $newMessage = str_replace('ciao', 'SALVE', $message);
 
     <div>
         <p> <strong>Messaggio censurato:</strong> "<?php echo $newMessage ?>" </p>
-        <p> <strong>Lunghezza del nuovo messaggio:</strong> <?php echo strlen($newMessage); ?> car. </p>
+        <p> <strong>Lunghezza del nuovo messaggio:</strong> <?php echo strlen($newMessage);?> car. </p>
+        <p> <strong>Numero di parole censurate: </strong> <?php echo $count?> </p>
     </div>
 </body>
 </html>
